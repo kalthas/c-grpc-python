@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package cosim;
+
+service CoSim {
+
+    rpc RMVal(SimPayload) returns (SimPayload) {}
+
+}
+
+message SimPayload {
+    string  type = 1;
+    repeated string channels = 2;
+    repeated int32 buffer = 3;
+}
