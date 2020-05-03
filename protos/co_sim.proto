@@ -4,12 +4,20 @@ package cosim;
 
 service CoSim {
 
-    rpc RMVal(SimPayload) returns (SimPayload) {}
+    rpc RMVal(SimRequest) returns (SimResponse) {}
 
 }
 
-message SimPayload {
-    string  type = 1;
-    repeated string channels = 2;
-    repeated int32 buffer = 3;
+message SimRequest {
+    int32  id = 1;
+    string  type = 2;
+    repeated string channels = 3;
+    repeated int32 buffer = 4;
+}
+
+message SimResponse {
+    int32  id = 1;
+    string  type = 2;
+    bool  valid = 3;
+    repeated int32 buffer = 4;
 }

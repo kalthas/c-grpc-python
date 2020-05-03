@@ -12,3 +12,17 @@ python -m grpc_tools.protoc -I../protos --python_out=. --grpc_python_out=. ../pr
 ```bash
 python co_sim_server.py
 ```
+# C
+## Install gRPC/C++
+Follow through https://grpc.io/docs/tutorials/basic/cpp/ to build/install gRPC/C++. Pay attention to step 'Clone the grpc repo and its submodules', and make sure all the git submodules are cloned successfully.
+## Build client
+```bash
+mkdir -p cmake/build
+cd cmake/build
+cmake ../..
+make -j
+```
+## Run c grpc client
+```bash
+./co_sim_client
+```
