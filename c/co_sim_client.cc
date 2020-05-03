@@ -30,9 +30,6 @@
 using grpc::Channel;
 using grpc::ChannelArguments;
 using grpc::ClientContext;
-using grpc::ClientReader;
-using grpc::ClientReaderWriter;
-using grpc::ClientWriter;
 using grpc::Status;
 using cosim::CoSim;
 using cosim::SimRequest;
@@ -108,7 +105,7 @@ int main(int argc, char** argv) {
 
   std::cout << "-------------- RunSim --------------" << std::endl;
   client.RMSim("type1", 2, 100);
-  client.RMSim("typex", 1, 100*1024); // 100KB buffer
+  client.RMSim("typex", 1, 100*1024); // 400KB buffer
   client.RMSim("typex", 1, 1024*1024); // 4MB buffer
   client.RMSim("type2", 3, 1024*1024*50); // 200MB buffer
 

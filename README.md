@@ -17,6 +17,7 @@ python co_sim_server.py
 Follow through https://grpc.io/docs/tutorials/basic/cpp/ to build/install gRPC/C++. Pay attention to step 'Clone the grpc repo and its submodules', and make sure all the git submodules are cloned successfully.
 ## Build client
 ```bash
+cd c
 mkdir -p cmake/build
 cd cmake/build
 cmake ../..
